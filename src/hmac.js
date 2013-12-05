@@ -1,6 +1,8 @@
-(function () {
+define([
+    'core'
+], function (core) {
     // Shortcuts
-    var C = CryptoJS;
+    var C = core.C;
     var C_lib = C.lib;
     var Base = C_lib.Base;
     var C_enc = C.enc;
@@ -122,4 +124,6 @@
             return hmac;
         }
     });
-}());
+
+    return HMAC;
+});

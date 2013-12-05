@@ -1,6 +1,8 @@
-(function (Math) {
+define([
+    'core'
+], function (core) {
     // Shortcuts
-    var C = CryptoJS;
+    var C = core.C;
     var C_lib = C.lib;
     var WordArray = C_lib.WordArray;
     var Hasher = C_lib.Hasher;
@@ -176,4 +178,6 @@
      *     var hmac = CryptoJS.HmacSHA256(message, key);
      */
     C.HmacSHA256 = Hasher._createHmacHelper(SHA256);
-}(Math));
+
+    return SHA256;
+});

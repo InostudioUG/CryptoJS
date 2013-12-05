@@ -1,7 +1,7 @@
 /**
  * CryptoJS core components.
  */
-var CryptoJS = CryptoJS || (function (Math, undefined) {
+define(function () {
     /**
      * CryptoJS namespace.
      */
@@ -699,5 +699,17 @@ var CryptoJS = CryptoJS || (function (Math, undefined) {
      */
     var C_algo = C.algo = {};
 
-    return C;
-}(Math));
+    return {
+        C: C,
+        C_lib: C_lib,
+        Base: Base,
+        WordArray: WordArray,
+        C_enc: C_enc,
+        Hex: Hex,
+        Latin1: Latin1,
+        Utf8: Utf8,
+        BufferedBlockAlgorithm: BufferedBlockAlgorithm,
+        Hasher: Hasher,
+        C_algo: C_algo
+    };
+});
